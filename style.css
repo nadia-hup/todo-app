@@ -1,0 +1,118 @@
+#todo-items {
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ flex-direction: row;
+
+ 
+ padding: 10px;
+}
+.todoItem {
+    width: 200px;
+    min-height: 200px;
+    padding: 10px;
+    background-color: #fff176;
+    font-family: "Comic Sans MS", cursive;
+    transform: rotate(-2deg);
+    transition: transform 0.2s;
+    margin: 15px;
+}
+.todoItem:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+.todoItem:nth-child(4n+2) {
+  background-color: #ff8a80;
+  transform: rotate(2deg);
+}
+
+.todoItem:nth-child(4n+3) {
+  background-color: #80d8ff;
+  transform: rotate(-1deg);
+  transition: transform 0.2s;
+}
+
+.todoItem:nth-child(4n+4) {
+  background-color: #b9f6ca;
+  transform: rotate(1deg);
+}
+
+.todoItem:nth-child(4n+2):hover {
+  transform: rotate(0deg) scale(1.05);
+}
+.todoItem:nth-child(4n+3):hover {
+  transform: rotate(0deg) scale(1.05);
+}
+.todoItem:nth-child(4n+4):hover {
+  transform: rotate(0deg) scale(1.05);
+}
+.titre {
+  margin-top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 5px;
+}
+
+.todoItem small {
+  color: #555;
+  font-size: 12px;
+}
+.form-group{
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.titre_from{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border :2px solid #f28755; 
+}
+.content_from{
+  padding: 15px;
+  border-radius: 10px;
+  border :2px solid #f28755; 
+}
+#add-btn{
+  padding: 10px 15px;
+  border-radius:20px;
+  border: none ;
+  background-color:  orange ;
+  color:white;
+  font-size : 15px;
+  margin:  10px auto;  
+}
+
+#add-btn:hover{
+  background-color:rgb(251, 170, 21, 0.8);
+  font-weight: bold;
+  cursor :pointer; 
+}
+.submitBtn{
+  padding: 10px 25px;
+  border-radius:20px;
+  border: none ;
+  background-color:  orange ;
+  color:white;
+  font-size : 15px;
+  margin:  10px auto;  
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.modal {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+}
